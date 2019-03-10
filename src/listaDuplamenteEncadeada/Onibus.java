@@ -8,7 +8,7 @@ package listaDuplamenteEncadeada;
 
 /**
  *
- * @author pablo
+ * @author Pablo Vicente
  */
 public class Onibus {
     private String encarrocadeira;

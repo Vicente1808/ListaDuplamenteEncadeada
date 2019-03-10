@@ -8,7 +8,7 @@ package listaDuplamenteEncadeada;
 
 /**
  *
- * @author pablo
+ * @author Pablo Vicente
  */
 public class Listas {
     public static void main(String[] args) {
@@ -52,15 +52,15 @@ public class Listas {
         System.out.println("------------------------Inserção Na Lista-------------------------");
         System.out.println(lista.exibirLista());
         System.out.println("------------------------Lista Atualizada--------------------------");
-        System.out.println("");
+        //System.out.println("");
         System.out.println("Onibus com prefixo: 1551 encontra-se na lista: "+lista.Buscar(1511));
-        System.out.println("");
+        //System.out.println("");
 
         System.out.println("--------------------Curosor");
         System.out.println("Cursor avança 2 passo: ");
-        lista.avançarKPassos(2);
+        lista.avancarKPassos(2);
         System.out.println(lista.getCursor());
-        System.out.println("");
+        //System.out.println("");
         System.out.println("--------------------Lista exclui atual-----------------------------");
         lista.excluirAtual();
         System.out.println("---------------------------lista atualizada--------------------------");
@@ -70,7 +70,7 @@ public class Listas {
         //System.out.println(lista.getCursor());
         lista.excluirAtual();
         System.out.println(lista.getCursor());
-        lista.avançarKPassos(2);
+        lista.avancarKPassos(2);
         System.out.println(lista.exibirLista());
         System.out.println(lista.getCursor());
 

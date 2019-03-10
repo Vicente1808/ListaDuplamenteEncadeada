@@ -8,19 +8,18 @@
 package listaDuplamenteEncadeada;
 /**
  *
- * @author pablo
+ * @author Pablo Vicente
  */
 public class ListaDuplamenteEncadeada {
 
-    Onibus primeiro;
-    Onibus cursor;
+    private Onibus primeiro;
+    private Onibus cursor;
 
     ListaDuplamenteEncadeada() {
     }
 
     public String getCursor(){
-        String retorno = cursor.getPrefixo()+" | "+cursor.getEncarrocadeira()+" | "+cursor.getCarroceria()+" | "+cursor.getMarcaMotor()+" | "+cursor.getModelMotor()+ "\n";
-        return retorno;
+        return cursor.getPrefixo()+" | "+cursor.getEncarrocadeira()+" | "+cursor.getCarroceria()+" | "+cursor.getMarcaMotor()+" | "+cursor.getModelMotor()+ "\n";
     }
     public void inserir(Onibus onibus){
         if(primeiro ==null){
@@ -66,15 +65,15 @@ public class ListaDuplamenteEncadeada {
             cursor.setAnteriorBus(onibus);
             onibus.setAnteriorBus(anterior);
         }
-    }
-    public void inserirApósOAtual(Onibus onibus){
+    }/*
+    public void inserirAposAtual(Onibus onibus){
         if(primeiro==null){
             inserir(onibus);
         }else{
             cursor = cursor.getProximoBus();
             InserirAntesDoAtual(onibus);
         }
-    }
+    }*/
     public void excluirAtual(){
         if(primeiro!=null){
             if(primeiro==primeiro.getAnteriorBus()){
@@ -103,7 +102,7 @@ public class ListaDuplamenteEncadeada {
 
         return retorno;
     }
-    public void avançarKPassos(int kPassos){
+    public void avancarKPassos(int kPassos){
         if(primeiro!=null){
             int contador=0;
             while(contador <kPassos){
@@ -128,7 +127,7 @@ public class ListaDuplamenteEncadeada {
         cursor=primeiro.getAnteriorBus();
     }
     public String exibirLista(){
-        String retorno="";
+        String retorno;
         if(primeiro==null){
             retorno = "Lista vazia";
         }else if(primeiro==primeiro.getAnteriorBus()){
